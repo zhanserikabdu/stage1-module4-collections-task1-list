@@ -14,7 +14,7 @@ public class ArrayListCreatorTest {
         ArrayListCreator arrayListCreator = new ArrayListCreator();
         ArrayList<String> expectedArrayList = new ArrayList<>();
 
-        ArrayList<String> actualArrayList = arrayListCreator.createString(new ArrayList<>());
+        ArrayList<String> actualArrayList = arrayListCreator.createArrayList(new ArrayList<>());
         assertEquals(expectedArrayList, actualArrayList);
     }
 
@@ -23,42 +23,34 @@ public class ArrayListCreatorTest {
         ArrayListCreator arrayListCreator = new ArrayListCreator();
         ArrayList<String> expectedArrayList = new ArrayList<>();
 
-        ArrayList<String> actualArrayList = arrayListCreator.createString(List.of("Hello", "Word"));
+        ArrayList<String> actualArrayList = arrayListCreator.createArrayList(List.of("Hello", "Word"));
         assertEquals(expectedArrayList, actualArrayList);
     }
 
     @Test
     public void createArrayListFromListWithThreeElements() {
         ArrayListCreator arrayListCreator = new ArrayListCreator();
-        ArrayList<String> expectedArrayList = new ArrayList<>();
-        expectedArrayList.add("you");
-        expectedArrayList.add("you");
+        ArrayList<String> expectedArrayList = new ArrayList<>(List.of("you", "you"));
 
-        ArrayList<String> actualArrayList = arrayListCreator.createString(List.of("I", "love", "you"));
+        ArrayList<String> actualArrayList = arrayListCreator.createArrayList(List.of("I", "love", "you"));
         assertEquals(expectedArrayList, actualArrayList);
     }
 
     @Test
     public void createArrayListFromListWithFourElements() {
         ArrayListCreator arrayListCreator = new ArrayListCreator();
-        ArrayList<String> expectedArrayList = new ArrayList<>();
-        expectedArrayList.add("the");
-        expectedArrayList.add("the");
+        ArrayList<String> expectedArrayList = new ArrayList<>(List.of("the", "the"));
 
-        ArrayList<String> actualArrayList = arrayListCreator.createString(List.of("Java", "is", "the", "best"));
+        ArrayList<String> actualArrayList = arrayListCreator.createArrayList(List.of("Java", "is", "the", "best"));
         assertEquals(expectedArrayList, actualArrayList);
     }
 
     @Test
     public void createArrayListFromListWithSixElements() {
         ArrayListCreator arrayListCreator = new ArrayListCreator();
-        ArrayList<String> expectedArrayList = new ArrayList<>();
-        expectedArrayList.add("consist");
-        expectedArrayList.add("consist");
-        expectedArrayList.add("objects");
-        expectedArrayList.add("objects");
+        ArrayList<String> expectedArrayList = new ArrayList<>(List.of("consist", "consist", "objects", "objects"));
 
-        ArrayList<String> actualArrayList = arrayListCreator.createString(List.of("List", "can", "consist",
+        ArrayList<String> actualArrayList = arrayListCreator.createArrayList(List.of("List", "can", "consist",
                 "of", "different", "objects"));
         assertEquals(expectedArrayList, actualArrayList);
     }

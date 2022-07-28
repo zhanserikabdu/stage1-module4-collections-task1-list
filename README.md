@@ -6,8 +6,8 @@ Implement the program which gets `List<String>` as parameter and creates a new `
 should consist of _duplicated_ words whose index in `List<String>` _is divisible by 3_ (indexes start from 1).
 
 ```
-public class WorkWithIndexes {
-    public String createString(List<String> sourceList) {
+public class ArrayListCreator {
+    public ArrayList<String> createArrayList(List<String> sourceList) {
     }
 }
 ```
