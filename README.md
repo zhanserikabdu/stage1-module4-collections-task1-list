@@ -1,6 +1,89 @@
-You need to implement the following tasks: 
-1. Write a method to iterate through all elements in an ArrayList containing the days of the week (strings). The method should return a string containing the elements of the list, separated by a space.
-2. Write a method to insert a string "MJC" into the ArrayList at the third (counting from 1) and last positions. The ArrayList should initially contain "String1", "String2", "String3". The method should return a string containing the elements of the list, separated by a space.
-3. Write a method to copy one ArrayList into another (copy list2 into list1). The first List should contain "1", "2", "3", "4". The second List should contain "A", "B", "C", "D". The method should return a string containing the elements of the list1, separated by a space.
-4. Write a method to iterate a LinkedList containing the days of the week (strings) in reverse order. The method should return a string containing the elements of the list in reverse order, separated by a space.
-5. Write a method that adds 1 000 000 elements to ArrayList and LinkedList then gets a random element from the filled lists by index 1 000 times. Measure the time spent. Compare the results and return 1 if the time spent for ArrayList is greater, -1 if less, 0 if equal.
+# Tasks
+
+## 1. Create ArrayList
+
+Implement the program which gets `List<String>` as parameter and creates a new `ArrayList<String>`. `ArrayList<String>`
+should consist of _duplicated_ words whose index in `List<String>` _is divisible by 3_ (indexes start from 1).
+
+```
+public class ArrayListCreator {
+    public ArrayList<String> createArrayList(List<String> sourceList) {
+    }
+}
+```
+
+### Example
+
+**Input**
+
+```
+[The, ArrayList, class, has, many, useful, methods]
+```
+
+**Output**
+
+```
+[class, class, useful, useful]
+```
+
+## 2. Create a LinkedList
+
+Implement the program which will create `LinkedList<Integer>` from `List<Integer>` following the rule:
+
+_If the number from the `List<Integer>` is odd, then insert this number at the beginning of the `LinkedList<Integer>`,
+otherwise, insert the number at the end_ of the `LinkedList<Integer>`.
+
+```
+public class LinkedListCreator {
+    public LinkedList<Integer> createLinkedList(List<Integer> sourceList) {
+    }
+}
+```
+
+### Example
+
+**Input**
+
+```
+[2, 14, 3, 6, 5, 7]
+```
+
+**Output**
+
+```
+[7, 5, 3, 2, 14, 6]
+```
+
+## 3. List sorting
+
+Implement the program which gets the `List` and sorts it in _ascending order of function_ `5x^2+3`, where `x` is element
+from `List`. If the function value is the same for multiple elements, those elements are sorted in ascending order.
+
+`List` consists of int _numbers represented as a_ `String`. Use a `Comparator` for sorting.
+
+```
+public class ListSorter {
+    public void sort(List<String> sourceList) {
+    }
+}
+
+class ListComparator implements Comparator<String> {
+    @Override
+    public int compare(String a, String b) {
+    }
+}
+```
+
+### Example
+
+**Input**
+
+```
+["-5", "-12", "0", "20", "9", "-20", "37"]
+```
+
+**Output**
+
+```
+["0", "-5", "9", "-12", "-20", "20", "37"]
+```
